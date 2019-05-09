@@ -1,0 +1,23 @@
+# This is the solution downloaded and perform well
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+
+class Solution:
+    def __init__(self):
+        self.root_dict = {}
+        
+    def rob(self, root: TreeNode) -> int:
+        return max(self.dfs(root))
+        
+    def dfs(self,node):
+        if not node: return (0,0)
+        l = self.dfs(node.left)
+        r = self.dfs(node.right)
+        # l[x,y] x: if rob,the maximum interest
+        # y: if not rob, the maximum interest
+
+        return (node.val+l[1]+r[1],max(l)+max(r))
