@@ -6,10 +6,7 @@
 #         self.left = None
 #         self.right = None
 
-class Solution:
-    def __init__(self):
-        self.root_dict = {}
-        
+class Solution:        
     def rob(self, root: TreeNode) -> int:
         return max(self.dfs(root))
         
