@@ -15,7 +15,7 @@ class Solution:
                                     break
                                 else:
                                     index_stop = False
-                                    count = 0
+                             count = 0
                         else:
                             count += 1
                         tmp = i
